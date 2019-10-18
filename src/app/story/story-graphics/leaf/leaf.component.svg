@@ -1,0 +1,15 @@
+<svg>
+    <path
+    [attr.transform]="transform"
+    fill="darkgreen"
+    d="
+    M 105 100
+    L 95 100
+    L 95 90
+    C 40 70 80 35 100 0
+    C 130 50 160 70 105 90
+    Z
+    "
+    (click)="log()"
+    />
+</svg>

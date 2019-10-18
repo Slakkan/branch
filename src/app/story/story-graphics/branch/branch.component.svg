@@ -1,0 +1,11 @@
+<svg>
+  <rect
+    [attr.transform]="rotate"
+    [attr.x]="to[0] - 5"
+    [attr.y]="to[1]"
+    width="10"
+    [attr.height]="height"
+    class="branch"
+    (click)="log()"
+  />
+</svg>

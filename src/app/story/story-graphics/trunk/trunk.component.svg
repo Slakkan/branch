@@ -1,0 +1,3 @@
+<svg>
+    <rect x="500" [attr.y]="start" width="100" [attr.height]="duration" class="trunk" />
+</svg>

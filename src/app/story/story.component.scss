@@ -1,0 +1,16 @@
+@import "variables";
+
+:host ::ng-deep .nav {
+  background: $dark-brown;
+}
+
+:host ::ng-deep .nav-link {
+  color: $off-white;
+  font-weight: bold;
+  &.active {
+    border-radius: 0;
+    background: $light-brown;
+    color: $off-black;
+    font-weight: bold;
+  }
+}
