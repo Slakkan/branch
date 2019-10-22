@@ -1,3 +1,17 @@
-<svg>
-    <rect x="500" [attr.y]="start" width="100" [attr.height]="duration" class="trunk" />
+<svg class="remove-me">
+  <g [@body]="animation" class="animated-svg" (mouseenter)="hoverStart($event)" (mouseleave)="hoverEnd()">
+    <rect x="500" [attr.y]="start" width="100" [attr.height]="duration" class="trunk" [attr.transform]="rotate" />
+    <rect
+      *ngIf="animation === 'hover' && !hasChild"
+      x="502"
+      [attr.y]="start + duration - 2"
+      width="96"
+      [attr.height]="25"
+      class="add-trunk"
+      [attr.transform]="rotate"
+      (click)="createTrunk()"
+    />
+    <circle *ngIf="animation === 'hover'" cx="390" [attr.cy]="start - (3 * duration) / 4" r="15" class="add-branch" />
+    <circle *ngIf="animation === 'hover'" cx="510" [attr.cy]="start - (3 * duration) / 4" r="15" class="add-branch" />
+  </g>
 </svg>

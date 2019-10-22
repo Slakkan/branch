@@ -5,7 +5,6 @@ import { BranchComponent } from './branch/branch.component';
 import { TrunkComponent } from './trunk/trunk.component';
 
 
-
 @NgModule({
   declarations: [LeafComponent, BranchComponent, TrunkComponent],
   imports: [

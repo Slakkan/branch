@@ -3,3 +3,23 @@
 .trunk {
     fill: $dark-brown;
 }
+
+.add-trunk {
+    fill: transparent;
+    stroke: $dark-brown;
+    stroke-width: 4px;
+    stroke-dasharray: 5px;
+    &:hover {
+        cursor: cell;
+    }
+}
+
+.add-branch {
+    fill: transparent;
+    stroke: $off-black;
+    stroke-width: 4px;
+    stroke-dasharray: 5px;
+    &:hover {
+        cursor: cell;
+    }
+}
