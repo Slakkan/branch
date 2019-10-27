@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap"
 
 import { StoryRoutingModule } from "./story-routing.module";
 import { StoryComponent } from "./story.component";
@@ -12,6 +11,6 @@ import { StoryGraphicsModule } from './story-graphics/story-graphics.module';
 
 @NgModule({
   declarations: [StoryTreeComponent, StoryLeafComponent, StoryComponent, StoryPlacesComponent],
-  imports: [CommonModule, StoryGraphicsModule, NgbModule, FormsModule, StoryRoutingModule]
+  imports: [CommonModule, StoryGraphicsModule, FormsModule, StoryRoutingModule]
 })
 export class StoryModule {}

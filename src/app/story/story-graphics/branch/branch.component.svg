@@ -1,11 +1,5 @@
-<svg>
-  <rect
-    [attr.transform]="rotate"
-    [attr.x]="to[0] - 5"
-    [attr.y]="to[1]"
-    width="10"
-    [attr.height]="height"
-    class="branch"
-    (click)="log()"
-  />
+<svg class="overflow">
+  <path [attr.d]="path" class="branch"/>
+  <circle [attr.cx]="cx1" [attr.cy]="cy1" r="5" class="branch-end"/>
+  <circle [attr.cx]="cx2" [attr.cy]="cy2" r="5" class="branch-end"/>
 </svg>

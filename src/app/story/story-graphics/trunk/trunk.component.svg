@@ -1,17 +1,17 @@
-<svg class="remove-me">
+<svg class="overflow">
   <g [@body]="animation" class="animated-svg" (mouseenter)="hoverStart($event)" (mouseleave)="hoverEnd()">
     <rect x="500" [attr.y]="start" width="100" [attr.height]="duration" class="trunk" [attr.transform]="rotate" />
     <rect
-      *ngIf="animation === 'hover' && !hasChild"
-      x="502"
+      *ngIf="animation === 'hover' && lastTrunk"
+      x="500"
       [attr.y]="start + duration - 2"
-      width="96"
+      width="100"
       [attr.height]="25"
       class="add-trunk"
       [attr.transform]="rotate"
-      (click)="createTrunk()"
+      (click)="sendMouseEvent($event, 'trunk')"
     />
-    <circle *ngIf="animation === 'hover'" cx="390" [attr.cy]="start - (3 * duration) / 4" r="15" class="add-branch" />
-    <circle *ngIf="animation === 'hover'" cx="510" [attr.cy]="start - (3 * duration) / 4" r="15" class="add-branch" />
+    <circle *ngIf="animation === 'hover'" cx="390" [attr.cy]="start - (3 * duration) / 4" r="15" class="add-branch" (click)="sendMouseEvent($event, 'branch', 'left')" />
+    <circle *ngIf="animation === 'hover'" cx="510" [attr.cy]="start - (3 * duration) / 4" r="15" class="add-branch" (click)="sendMouseEvent($event, 'branch', 'right')" />
   </g>
 </svg>

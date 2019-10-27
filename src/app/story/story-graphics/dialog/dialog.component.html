@@ -1,0 +1,11 @@
+<div *ngIf="show" [style.top]="top" [style.left]="left" class="form-window">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-group">
+    <div formArrayName="props" class="props mx-xs-2 mx-sm-3 mx-md-4">
+      <label *ngFor="let prop of props.controls; let i = index" class="form-control m-2 p-0">
+        {{ editableProps[component][i].name }}
+        <input type="text" class="field" [formControlName]="i" size="4" maxlength="4" />
+      </label>
+      <button type="submit" class="btn btn-secondary mt-2">Ok</button>
+    </div>
+  </form>
+</div>

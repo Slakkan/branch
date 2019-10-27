@@ -11,18 +11,22 @@ import { SpawnerService } from "src/app/services/spawner.service";
 export class StoryTreeComponent implements OnInit, OnDestroy {
   constructor(private spawner: SpawnerService) {}
 
+  clickedPosition
+  showDialog = false;
   trunks: trunk[];
+  branches: branch[][]
 
   subscriptions: Subscription[] = [];
 
-  viewBox = "0 0 1000 1000";
+  viewBox = "0 0 900 900";
   translate = "translate(0 0)";
   isMoving = false;
   startingPosition: [number, number];
   offsetPosition: [number, number] = [0, 0];
 
   ngOnInit() {
-    this.subscriptions.push(this.spawner.getTrunks().subscribe(trunks => (this.trunks = trunks)));
+    this.subscriptions.push(this.spawner.getTrunks.subscribe(trunks => (this.trunks = trunks)));
+    this.subscriptions.push(this.spawner.getBranches.subscribe(branches => (this.branches = branches)));
   }
 
   ngOnDestroy() {

@@ -1,4 +1,5 @@
 <div class="d-flex tree bgc-light-brown">
+  <div dialog style="display: flex;"></div>
   <svg
     class="flex-fill"
     [attr.viewBox]="viewBox"
@@ -12,7 +13,11 @@
       <g *ngFor="let trunk of trunks">
         <g trunk [start]="trunk.start" [duration]="trunk.duration"></g>
       </g>
-      <g trunk [start]="1000" [duration]="500"></g>
+      <g *ngFor="let branchArray of branches">
+        <g *ngFor="let branch of branchArray">
+          <g branch [from]="branch.from" [to]="branch.to"></g>
+        </g>
+      </g>
     </g>
   </svg>
 </div>

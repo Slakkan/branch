@@ -1,5 +1,10 @@
 @import 'variables';
 
 .branch {
+    stroke: $dark-brown;
+    stroke-width: 10px;
+}
+
+.branch-end{
     fill: $dark-brown;
 }
